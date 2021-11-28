@@ -12,7 +12,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "comma-dangle": 0
   },
   "plugins": ["prettier"],
   "globals": {

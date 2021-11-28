@@ -3,4 +3,16 @@ const createBoard = () => {
   console.log(board);
   return board;
 };
-module.exports = { createBoard };
+
+const addMines = () => {
+  const matrix = [
+    ['X', '', ''],
+    ['', '', ''],
+    ['', '', '']
+  ];
+  return matrix;
+};
+module.exports = {
+  createBoard,
+  addMines
+};
