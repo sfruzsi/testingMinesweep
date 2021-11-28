@@ -1,6 +1,8 @@
 # Notes
 > Pomodoro 1
-- Note
+- Write User stories and scenarios
+- Acceptance test
+
 > Pomodoro 2
 - Note
 > Pomodoro 3
