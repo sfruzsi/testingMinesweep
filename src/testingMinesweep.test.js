@@ -8,6 +8,7 @@ describe('Board creation', () => {
   });
 
   it('Given the board is 3x3 When I start the game Then there is 1 mine on [0,0] the board', () => {
+    global.Math.random = () => 0;
     expect(addMines()).toStrictEqual([
       ['X', '', ''],
       ['', '', ''],
@@ -16,6 +17,15 @@ describe('Board creation', () => {
   });
 
   it('Given the board is 3x3 When I start the game Then there is 1 random mine', () => {
+    global.Math.random = () => 0.5;
+    expect(addMines()).toStrictEqual([
+      ['', '', ''],
+      ['', 'X', ''],
+      ['', '', '']
+    ]);
+  });
+
+  it('Given the board is 3x3 When I start the game Then there is random number of random mines', () => {
     global.Math.random = () => 0.5;
     expect(addMines()).toStrictEqual([
       ['', '', ''],

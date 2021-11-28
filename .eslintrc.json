@@ -13,7 +13,8 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "no-plusplus": "off"
   },
   "plugins": ["prettier"],
   "globals": {

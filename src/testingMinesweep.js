@@ -1,15 +1,20 @@
 const createBoard = () => {
   const board = '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
-  console.log(board);
   return board;
 };
 
 const addMines = () => {
   const matrix = [
-    ['X', '', ''],
+    ['', '', ''],
     ['', '', ''],
     ['', '', '']
   ];
+  const mineNumber = Math.floor(Math.random() * 8) + 1;
+  for (let i = 0; i < mineNumber; i++) {
+    const posX = Math.floor(Math.random() * 3);
+    const posY = Math.floor(Math.random() * 3);
+    matrix[posX][posY] = 'X';
+  }
   return matrix;
 };
 module.exports = {
