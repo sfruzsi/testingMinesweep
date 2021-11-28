@@ -1,4 +1,4 @@
-const { createBoard, addMines } = require('./testingMinesweep');
+const { createBoard, addMines, addNumbers } = require('./testingMinesweep');
 
 describe('Board creation', () => {
   it('Given the board is 3x3 When I start the game Then should return 3x3 empty board', () => {
