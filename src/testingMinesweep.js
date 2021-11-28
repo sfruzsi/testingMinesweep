@@ -1,14 +1,13 @@
 class MineSweeper {
   board = '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
+
   matrix = [
     ['', '', ''],
     ['', '', ''],
     ['', '', '']
   ];
 
-  createBoard = () => {
-    return this.board;
-  }
+  createBoard = () => this.board;
 
   addMines = () => {
     const mineNumber = Math.floor(Math.random() * 8) + 1;
@@ -18,13 +17,13 @@ class MineSweeper {
       this.matrix[posX][posY] = 'X';
     }
     return this.matrix;
-  }
-  
+  };
+
   addNumbers = () => [
     ['1', '1', '1'],
     ['1', 'X', '1'],
     ['1', '1', '1']
-  ]
+  ];
 }
 
 module.exports = {

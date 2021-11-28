@@ -24,6 +24,7 @@
     "chai": "^4.3.4"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "complexity-report": "*",
     "eslint": "^7.29.0",
     "eslint-config-airbnb-base": "^14.2.1",
