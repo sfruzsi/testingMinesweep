@@ -33,4 +33,13 @@ describe('Board creation', () => {
       ['', '', '']
     ]);
   });
+
+  it('Given the board is 3x3 When I start the game Then the numbers next to the mines are there', () => {
+    global.Math.random = () => 0.5;
+    expect(addNumbers()).toStrictEqual([
+      ['1', '1', '1'],
+      ['1', 'X', '1'],
+      ['1', '1', '1']
+    ]);
+  });
 });
