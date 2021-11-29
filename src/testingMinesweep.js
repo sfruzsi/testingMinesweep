@@ -13,6 +13,8 @@ class MineSweeper {
     ['', '', '']
   ];
 
+  status;
+
   createBoard = () => this.sBoard;
 
   addMines = () => {
@@ -22,6 +24,7 @@ class MineSweeper {
       const posY = Math.floor(Math.random() * 3);
       this.matrix[posX][posY] = BOMB;
     }
+    this.status = 'In progress';
     return this.matrix;
   };
 
@@ -44,6 +47,7 @@ class MineSweeper {
       return 'Cleared cell';
     }
     this.revealCell(x, y, BOMB);
+    this.status = 'fail';
     return 'Game Over';
   };
 
