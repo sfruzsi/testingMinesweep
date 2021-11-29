@@ -64,5 +64,13 @@ describe('Board creation', () => {
         '+-+-+-+\n| | | |\n+-+-+-+\n| |X| |\n+-+-+-+\n| | | |\n+-+-+-+'
       );
     });
+
+    it('Given a board with mine on [1,1] When I click on [0,0] Then I get Cleared cell', () => {
+      global.Math.random = () => 0.5;
+      game.clickCell(0, 0);
+      expect(game.board).toBe(
+        '+-+-+-+\n|1| | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+'
+      );
+    });
   });
 });
