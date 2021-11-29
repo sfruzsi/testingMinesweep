@@ -62,3 +62,4 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 - Given a game When I step on a bomb Then the game ends with loss
 - Given a game When I clear all the cells Then the game ends with win
+- Given a finished game When I try to make another move Then it doesn't let me

@@ -24,7 +24,7 @@ class MineSweeper {
       const posY = Math.floor(Math.random() * 3);
       this.matrix[posX][posY] = BOMB;
     }
-    this.status = 'In progress';
+    this.status = 'in-progress';
     return this.matrix;
   };
 
