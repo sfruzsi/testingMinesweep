@@ -44,7 +44,10 @@ class MineSweeper {
         this.revealCell(x, y, BLANK);
         this.revealOnZero(x, y);
       }
-      return 'Cleared cell';
+      this.checkStatus();
+      return this.status === 'in-progress'
+        ? 'Cleared cell'
+        : 'The land is cleared! GOOD JOB!';
     }
     this.revealCell(x, y, BOMB);
     this.status = 'fail';
@@ -73,6 +76,10 @@ class MineSweeper {
         }
       }
     }
+  };
+
+  checkStatus = () => {
+    if (this.board.split(' ').length - 1 === 1) this.status = 'win';
   };
 }
 
