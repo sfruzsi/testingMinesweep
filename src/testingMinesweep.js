@@ -44,6 +44,8 @@ class MineSweeper {
     )}`;
     return 'Game Over';
   };
+
+  flagCell = () => 'Cell flagged as bomb';
 }
 
 module.exports = {
