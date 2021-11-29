@@ -43,3 +43,9 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 > As a player I want to make my second move So that I can continue the game
 
 - Given the board has mines When I click first on a non-mine then a mine Then both should appear on the board
+
+## User Story 4
+
+> As a player I want to flag the bombs so that I can plan my moves
+
+- Given a board with mines When I flag a cell Then the \* will appear on the board
