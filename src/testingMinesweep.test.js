@@ -44,6 +44,9 @@ describe('Board creation', () => {
   });
 
   describe('Clicking on a bomb', () => {
+    beforeEach(() => {
+      game.addMines();
+    });
     it('Given a board with mine on [1,1] When I click on [1,1] Then I get Game Over', () => {
       global.Math.random = () => 0.5;
       expect(game.clickCell(1, 1)).toBe('Game Over');

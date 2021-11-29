@@ -19,7 +19,13 @@ class MineSweeper {
     return this.matrix;
   };
 
-  clickCell = () => 'Game Over';
+  clickCell = (x, y) => {
+    console.log(this.matrix);
+    if (this.matrix[x][y] !== 'X') {
+      return 'Cleared cell';
+    }
+    return 'Game Over';
+  };
 }
 
 module.exports = {
