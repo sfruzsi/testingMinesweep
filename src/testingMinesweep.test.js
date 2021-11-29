@@ -153,4 +153,13 @@ describe('Testing the Mine Sweeper', () => {
       );
     });
   });
+
+  describe('Game ends', () => {
+    it('Given a game with bomb on [1,1] When I click on [1,1] Then game ends with loss', () => {
+      global.Math.random = () => 0.5;
+      game.addMines();
+      game.clickCell(1, 1);
+      expect(game.status).toBe('fail');
+    });
+  });
 });

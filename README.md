@@ -55,3 +55,10 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 > As a player I want the cells next to the 0 I clicked on to open So that I can solve the game
 
 - Given a board When I click on a cell with no bomb in the viscinity Then the cells will open next to it
+
+## User sotry 6
+
+> As a player I want the game to end when I win or loose So that I know the status
+
+- Given a game When I step on a bomb Then the game ends with loss
+- Given a game When I clear all the cells Then the game ends with win
