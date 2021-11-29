@@ -86,4 +86,16 @@ describe('Testing the Mine Sweeper', () => {
       );
     });
   });
+
+  describe('Second move', () => {
+    it('Given a board with mine on [1,1] When I click on [0,1] and [1,1] Then Game Over', () => {
+      global.Math.random = () => 0.5;
+      game.addMines();
+      game.clickCell(0, 1);
+      game.clickCell(1, 1);
+      expect(game.board).toBe(
+        '+-+-+-+\n| |1| |\n+-+-+-+\n| |X| |\n+-+-+-+\n| | | |\n+-+-+-+'
+      );
+    });
+  });
 });

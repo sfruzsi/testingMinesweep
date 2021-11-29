@@ -32,7 +32,14 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 ## User story 2
 
-> As a player I want the game to end when I click on a bomb So that I can play properly
+> As a player I want to make the first move So that I can end the game or know how much mines are where I clicked
 
 - Given the board has mines When I click on the mine Then the game ends
 - Given the board has mines When I click on the mine Then the board reveals the mine I clicked on
+- Given the board has mines When I click on a non-mine Then the board reveals the number of mines
+
+## User story 3
+
+> As a player I want to make my second move So that I can continue the game
+
+- Given the board has mines When I click first on a non-mine then a mine Then both should appear on the board
