@@ -1,5 +1,6 @@
 const BOMB = 'X';
 const FLAG = '*';
+const BLANK = '_';
 
 class MineSweeper {
   board = '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
@@ -37,7 +38,8 @@ class MineSweeper {
       if (mineCount > 0) {
         this.revealCell(x, y, mineCount);
       } else {
-        this.revealOnZero();
+        this.revealCell(x, y, BLANK);
+        this.revealOnZero(x, y);
       }
       return 'Cleared cell';
     }
@@ -58,8 +60,15 @@ class MineSweeper {
     )}${character}${this.board.substr(position + 1)}`;
   };
 
-  revealOnZero = () => {
-    this.board = '+-+-+-+\n| |1|_|\n+-+-+-+\n|1|1|_|\n+-+-+-+\n|_|_|_|\n+-+-+-+';
+  revealOnZero = (x, y) => {
+    for (let i = Math.max(x - 1, 0); i <= Math.min(x + 1, 2); i++) {
+      for (let j = Math.max(y - 1, 0); j <= Math.min(y + 1, 2); j++) {
+        const position = this.sBoard.split(' ', 3 * i + j + 1).join(' ').length;
+        if (this.board[position] === ' ') {
+          this.clickCell(i, j);
+        }
+      }
+    }
   };
 }
 
