@@ -110,9 +110,17 @@ describe('Testing the Mine Sweeper', () => {
   });
 
   describe('Flag cells', () => {
-    it('Given a board When I flag [1,1] Then * appears in [1,1]', () => {
+    it('Given a board When I flag [1,1] Then returns cell flagged as bomb', () => {
       game.addMines();
       expect(game.flagCell(1, 1)).toBe('Cell flagged as bomb');
+    });
+
+    it('Given a board When I flag [1,1] Then * appears in [1,1]', () => {
+      game.addMines();
+      game.flagCell(1, 1);
+      expect(game.board).toBe(
+        '+-+-+-+\n| | | |\n+-+-+-+\n| |*| |\n+-+-+-+\n| | | |\n+-+-+-+'
+      );
     });
   });
 });
