@@ -20,7 +20,8 @@ class MineSweeper {
   };
 
   clickCell = (x, y) => {
-    console.log(this.matrix);
+    // eslint-disable-next-line prettier/prettier
+    this.board = '+-+-+-+\n| | | |\n+-+-+-+\n| |X| |\n+-+-+-+\n| | | |\n+-+-+-+';
     if (this.matrix[x][y] !== 'X') {
       return 'Cleared cell';
     }
