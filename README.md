@@ -1,6 +1,6 @@
 # Exercise: testingMinesweep
 
-[![Testing](https://github.com/sfruzsi/testingMinesweep/actions/workflows/test.yml/badge.svg)](https://github.com/sfruzsitestingMinesweep/actions/workflows/test.yml) [![Linting](https://github.com/sfruzsi/testingMinesweep/actions/workflows/lint.yml/badge.svg)](https://github.com/sfruzsi/testingMinesweep/actions/workflows/lint.yml) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=sfruzsi_testingMinesweep&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=sfruzsi_testingMinesweep) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sfruzsi_testingMinesweep&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=sfruzsi_testingMinesweep)
+[![Testing](https://github.com/sfruzsi/testingMinesweep/actions/workflows/test.yml/badge.svg)](https://github.com/sfruzsi/testingMinesweep/actions/workflows/test.yml) [![Linting](https://github.com/sfruzsi/testingMinesweep/actions/workflows/lint.yml/badge.svg)](https://github.com/sfruzsi/testingMinesweep/actions/workflows/lint.yml) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=sfruzsi_testingMinesweep&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=sfruzsi_testingMinesweep) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sfruzsi_testingMinesweep&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=sfruzsi_testingMinesweep)
 
 ## Mine Sweeper - Game Rules:
 
