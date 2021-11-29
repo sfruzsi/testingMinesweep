@@ -45,8 +45,11 @@ class MineSweeper {
     return 'Game Over';
   };
 
-  flagCell = () => {
-    this.board = '+-+-+-+\n| | | |\n+-+-+-+\n| |*| |\n+-+-+-+\n| | | |\n+-+-+-+';
+  flagCell = (x, y) => {
+    const position = this.sBoard.split(' ', 3 * x + y + 1).join(' ').length;
+    this.board = `${this.board.substr(0, position)}*${this.board.substr(
+      position + 1
+    )}`;
     return 'Cell flagged as bomb';
   };
 }
