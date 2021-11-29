@@ -34,7 +34,11 @@ class MineSweeper {
           }
         }
       }
-      this.revealCell(x, y, mineCount);
+      if (mineCount > 0) {
+        this.revealCell(x, y, mineCount);
+      } else {
+        this.revealOnZero();
+      }
       return 'Cleared cell';
     }
     this.revealCell(x, y, BOMB);
@@ -52,6 +56,10 @@ class MineSweeper {
       0,
       position
     )}${character}${this.board.substr(position + 1)}`;
+  };
+
+  revealOnZero = () => {
+    this.board = '+-+-+-+\n| |1|_|\n+-+-+-+\n|1|1|_|\n+-+-+-+\n|_|_|_|\n+-+-+-+';
   };
 }
 

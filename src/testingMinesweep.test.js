@@ -134,13 +134,22 @@ describe('Testing the Mine Sweeper', () => {
     });
   });
 
-  describe('Clicking on a 0', () => {
+  describe('Clicking on a blank', () => {
     it('Given a board with bomb on [0,0] When I click on [2,2] Then cells next to it will open', () => {
       global.Math.random = () => 0;
       game.addMines();
       game.clickCell(2, 2);
       expect(game.board).toBe(
         '+-+-+-+\n| |1|_|\n+-+-+-+\n|1|1|_|\n+-+-+-+\n|_|_|_|\n+-+-+-+'
+      );
+    });
+
+    it('Given a board with bomb on [2,2] When I click on [0,0] Then cells next to it will open', () => {
+      global.Math.random = () => 0;
+      game.addMines();
+      game.clickCell(2, 2);
+      expect(game.board).toBe(
+        '+-+-+-+\n|_|_|_|\n+-+-+-+\n|_|1|1|\n+-+-+-+\n|_|1|_|\n+-+-+-+'
       );
     });
   });
