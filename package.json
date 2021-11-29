@@ -20,9 +20,7 @@
     "url": "https://github.com/sfruzsi/testingMinesweep/issues"
   },
   "homepage": "https://github.com/sfruzsi/testingMinesweep#readme",
-  "dependencies": {
-    "chai": "^4.3.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "complexity-report": "*",
@@ -31,7 +29,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
-    "jest": "^27.0.5",
+    "jest": "^27.3.1",
     "prettier": "^2.3.1"
   }
 }

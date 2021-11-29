@@ -37,14 +37,12 @@ describe('Board creation', () => {
       ['', '', '']
     ]);
   });
+});
 
-  it('Given the board is 3x3 When I start the game Then the numbers next to the mines are there', () => {
+describe('Clicking on a bomb', () => {
+  it('Given a board with mine on [1,1] When I click on [1,1] Then I get Game Over', () => {
     global.Math.random = () => 0.5;
     const game = new MineSweeper();
-    expect(game.addNumbers()).toStrictEqual([
-      ['1', '1', '1'],
-      ['1', 'X', '1'],
-      ['1', '1', '1']
-    ]);
+    expect(game.clickCell(1, 1)).toBe('Game Over');
   });
 });

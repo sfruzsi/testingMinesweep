@@ -18,12 +18,6 @@ class MineSweeper {
     }
     return this.matrix;
   };
-
-  addNumbers = () => [
-    ['1', '1', '1'],
-    ['1', 'X', '1'],
-    ['1', '1', '1']
-  ];
 }
 
 module.exports = {

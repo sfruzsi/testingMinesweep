@@ -25,12 +25,13 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 
 ## User story 1
 
-> As a player I want a board and at least 1 mine So that I can play the game
+> As a player I want a board and 0 < x < 9 mines So that I can play the game
 
 - Scenario 1: Given the board is 3x3 When I start the game Then I see a 3x3 board
 - Scenario 2: Given the board is 3x3 When I start the game Then I have more than 1 mine but less than 9 and the numbers in the surrounding cells
-- Scenario 3: Given the board is 3x3 When I start the game Then the cells are hidden from the player
 
 ## User story 2
 
-> As a ...
+> As a player I want the game to end when I click on a bomb So that I can play properly
+
+- Given the board has mines When I click on the mine Then the game ends
