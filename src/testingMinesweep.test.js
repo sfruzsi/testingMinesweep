@@ -45,8 +45,8 @@ describe('Testing the Mine Sweeper', () => {
 
   describe('Clicking on a bomb', () => {
     beforeEach(() => {
-      game.addMines();
       global.Math.random = () => 0.5;
+      game.addMines();
     });
     it('Given a board with mine on [1,1] When I click on [1,1] Then I get Game Over', () => {
       expect(game.clickCell(1, 1)).toBe('Game Over');
@@ -74,6 +74,15 @@ describe('Testing the Mine Sweeper', () => {
       game.clickCell(0, 1);
       expect(game.board).toBe(
         '+-+-+-+\n| |1| |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+'
+      );
+    });
+
+    it('Given a board with mine on [0,0] and [1,1] When I click on [0,1] Then 2 will appear on [0,1]', () => {
+      global.Math.random = () => 0;
+      game.addMines();
+      game.clickCell(0, 1);
+      expect(game.board).toBe(
+        '+-+-+-+\n| |2| |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+'
       );
     });
   });
