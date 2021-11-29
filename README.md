@@ -35,3 +35,4 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 > As a player I want the game to end when I click on a bomb So that I can play properly
 
 - Given the board has mines When I click on the mine Then the game ends
+- Given the board has mines When I click on the mine Then the board reveals the mine I clicked on

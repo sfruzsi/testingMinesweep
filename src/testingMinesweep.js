@@ -18,6 +18,8 @@ class MineSweeper {
     }
     return this.matrix;
   };
+
+  clickCell = () => 'Game Over';
 }
 
 module.exports = {
