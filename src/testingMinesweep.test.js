@@ -48,5 +48,10 @@ describe('Board creation', () => {
       global.Math.random = () => 0.5;
       expect(game.clickCell(1, 1)).toBe('Game Over');
     });
+
+    it('Given a board with mine on [1,1] When I click on [0,0] Then I get Cleared cell', () => {
+      global.Math.random = () => 0.5;
+      expect(game.clickCell(0, 0)).toBe('Cleared cell');
+    });
   });
 });
