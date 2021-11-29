@@ -122,5 +122,15 @@ describe('Testing the Mine Sweeper', () => {
         '+-+-+-+\n| | | |\n+-+-+-+\n| |*| |\n+-+-+-+\n| | | |\n+-+-+-+'
       );
     });
+
+    it('Given a board When I flag [1,1] Then * appears in [1,1]', () => {
+      global.Math.random = () => 0.5;
+      game.addMines();
+      game.clickCell(0, 1);
+      game.flagCell(1, 1);
+      expect(game.board).toBe(
+        '+-+-+-+\n| |1| |\n+-+-+-+\n| |*| |\n+-+-+-+\n| | | |\n+-+-+-+'
+      );
+    });
   });
 });
