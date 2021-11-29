@@ -20,11 +20,17 @@ class MineSweeper {
   };
 
   clickCell = (x, y) => {
-    // eslint-disable-next-line prettier/prettier
-    this.board = '+-+-+-+\n| | | |\n+-+-+-+\n| |X| |\n+-+-+-+\n| | | |\n+-+-+-+';
     if (this.matrix[x][y] !== 'X') {
+      const index = this.board.split(' ', 3 * x + y + 1).join(' ').length;
+      this.board = `${this.board.substr(0, index)}1${this.board.substr(
+        index + 1
+      )}`;
       return 'Cleared cell';
     }
+    const index = this.board.split(' ', 3 * x + y + 1).join(' ').length;
+    this.board = `${this.board.substr(0, index)}X${this.board.substr(
+      index + 1
+    )}`;
     return 'Game Over';
   };
 }

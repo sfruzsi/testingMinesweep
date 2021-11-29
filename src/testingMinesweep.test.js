@@ -1,6 +1,6 @@
 const { MineSweeper } = require('./testingMinesweep');
 
-describe('Board creation', () => {
+describe('Testing the Mine Sweeper', () => {
   let game;
   beforeEach(() => {
     game = new MineSweeper();
@@ -46,30 +46,34 @@ describe('Board creation', () => {
   describe('Clicking on a bomb', () => {
     beforeEach(() => {
       game.addMines();
+      global.Math.random = () => 0.5;
     });
     it('Given a board with mine on [1,1] When I click on [1,1] Then I get Game Over', () => {
-      global.Math.random = () => 0.5;
       expect(game.clickCell(1, 1)).toBe('Game Over');
     });
 
     it('Given a board with mine on [1,1] When I click on [0,0] Then I get Cleared cell', () => {
-      global.Math.random = () => 0.5;
       expect(game.clickCell(0, 0)).toBe('Cleared cell');
     });
 
-    it('Given a board with mine on [1,1] When I click on [0,0] Then I get Cleared cell', () => {
-      global.Math.random = () => 0.5;
+    it('Given a board with mine on [1,1] When I click on [1,1] Then X will appear on [1,1]', () => {
       game.clickCell(1, 1);
       expect(game.board).toBe(
         '+-+-+-+\n| | | |\n+-+-+-+\n| |X| |\n+-+-+-+\n| | | |\n+-+-+-+'
       );
     });
 
-    it('Given a board with mine on [1,1] When I click on [0,0] Then I get Cleared cell', () => {
-      global.Math.random = () => 0.5;
+    it('Given a board with mine on [1,1] When I click on [0,0] Then 1 will appear on [0,0]', () => {
       game.clickCell(0, 0);
       expect(game.board).toBe(
         '+-+-+-+\n|1| | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+'
+      );
+    });
+
+    it('Given a board with mine on [1,1] When I click on [0,1] Then 1 will appear on [0,1]', () => {
+      game.clickCell(0, 1);
+      expect(game.board).toBe(
+        '+-+-+-+\n| |1| |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+'
       );
     });
   });
