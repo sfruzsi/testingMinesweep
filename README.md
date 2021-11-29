@@ -49,3 +49,9 @@ You don't have to mark all the bombs to win; you just need to open all non-bomb 
 > As a player I want to flag the bombs so that I can plan my moves
 
 - Given a board with mines When I flag a cell Then the \* will appear on the board
+
+## User story 5
+
+> As a player I want the cells next to the 0 I clicked on to open So that I can solve the game
+
+- Given a board When I click on a cell with no bomb in the viscinity Then the cells will open next to it
